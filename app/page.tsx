@@ -4,6 +4,8 @@ import Statistics from "@/components/home/Statistics";
 import Features from "@/components/home/Features";
 import FeaturedCourses from "@/components/home/FeaturedCourses";
 import AiTutor from "@/components/home/AiTutor";
+import Testimonials from "@/components/home/Testimonials";
+import FAQ from "@/components/home/FAQ";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <Features />
       <FeaturedCourses />
       <AiTutor />
+      <Testimonials />
+      <FAQ />
     </main>
   );
 }
