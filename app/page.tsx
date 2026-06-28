@@ -6,6 +6,7 @@ import FeaturedCourses from "@/components/home/FeaturedCourses";
 import AiTutor from "@/components/home/AiTutor";
 import Testimonials from "@/components/home/Testimonials";
 import FAQ from "@/components/home/FAQ";
+import CTA from "@/components/home/CTA";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <AiTutor />
       <Testimonials />
       <FAQ />
+      <CTA />
     </main>
   );
 }
