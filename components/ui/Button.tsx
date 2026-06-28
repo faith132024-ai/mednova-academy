@@ -1,25 +1,19 @@
 import { ReactNode } from "react";
 
-interface BadgeProps {
+type ButtonProps = {
   children: ReactNode;
-}
+  className?: string;
+};
 
-export default function Badge({ children }: BadgeProps) {
+export default function Button({
+  children,
+  className = "",
+}: ButtonProps) {
   return (
-    <span
-      className="
-        inline-flex
-        items-center
-        rounded-full
-        bg-blue-100
-        text-blue-700
-        px-4
-        py-2
-        text-sm
-        font-semibold
-      "
+    <button
+      className={`px-6 py-3 rounded-xl font-semibold transition-all ${className}`}
     >
       {children}
-    </span>
+    </button>
   );
 }
