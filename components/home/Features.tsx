@@ -1,3 +1,6 @@
+import SectionTitle from "@/components/ui/SectionTitle";
+import Card from "@/components/ui/Card";
+
 export default function Features() {
   const features = [
     {
@@ -28,39 +31,35 @@ export default function Features() {
 
   return (
     <section className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center mb-16">
-          <p className="text-blue-600 font-semibold uppercase tracking-wider">
-            Why Choose Us
-          </p>
+      <div className="max-w-7xl mx-auto px-6">
 
-          <h2 className="text-4xl font-bold mt-4">
-            Why Choose MedNova Academy?
-          </h2>
-
-          <p className="text-gray-600 mt-6 max-w-2xl mx-auto">
-            Kami menghadirkan pengalaman belajar kedokteran modern yang
-            menggabungkan teknologi AI dengan materi berkualitas.
-          </p>
-        </div>
+        <SectionTitle
+          badge="Why Choose Us"
+          title="Why Choose MedNova Academy?"
+          description="Kami menghadirkan pengalaman belajar kedokteran modern yang menggabungkan teknologi AI dengan materi berkualitas."
+        />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300"
-            >
-              <div className="text-5xl">{feature.icon}</div>
 
-              <h3 className="font-bold text-xl mt-6">
+          {features.map((feature) => (
+            <Card
+              key={feature.title}
+              className="p-8 text-center"
+            >
+              <div className="text-5xl mb-6">
+                {feature.icon}
+              </div>
+
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
                 {feature.title}
               </h3>
 
-              <p className="text-gray-600 mt-4 leading-7">
+              <p className="text-gray-600 leading-7">
                 {feature.description}
               </p>
-            </div>
+            </Card>
           ))}
+
         </div>
       </div>
     </section>
