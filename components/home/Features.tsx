@@ -1,28 +1,35 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import Card from "@/components/ui/Card";
 
+import {
+  Bot,
+  BookOpen,
+  Stethoscope,
+  ClipboardList,
+} from "lucide-react";
+
 export default function Features() {
   const features = [
     {
-      icon: "🤖",
+      icon: Bot,
       title: "AI Medical Tutor",
       description:
         "Belajar bersama AI yang siap menjawab pertanyaan medis kapan saja.",
     },
     {
-      icon: "📚",
+      icon: BookOpen,
       title: "Structured Courses",
       description:
         "Materi lengkap dari anatomi hingga pembelajaran klinis.",
     },
     {
-      icon: "🩺",
+      icon: Stethoscope,
       title: "Virtual Patient",
       description:
         "Latihan mendiagnosis pasien melalui simulasi kasus nyata.",
     },
     {
-      icon: "📝",
+      icon: ClipboardList,
       title: "Question Bank",
       description:
         "Ribuan soal latihan beserta pembahasan lengkap.",
@@ -46,8 +53,12 @@ export default function Features() {
               key={feature.title}
               className="p-8 text-center"
             >
-              <div className="text-5xl mb-6">
-                {feature.icon}
+              <div className="flex justify-center mb-6">
+                <feature.icon
+                  size={56}
+                  className="text-blue-600"
+                  strokeWidth={2}
+                />
               </div>
 
               <h3 className="text-xl font-bold text-gray-900 mb-4">

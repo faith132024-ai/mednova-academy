@@ -1,10 +1,10 @@
+import Badge from "./Badge";
+
 interface SectionTitleProps {
   badge: string;
   title: string;
   description: string;
 }
-
-import Badge from "./Badge";
 
 export default function SectionTitle({
   badge,
@@ -13,7 +13,6 @@ export default function SectionTitle({
 }: SectionTitleProps) {
   return (
     <div className="text-center mb-16">
-
       <Badge>{badge}</Badge>
 
       <h2 className="text-4xl font-bold mt-6">
@@ -23,7 +22,6 @@ export default function SectionTitle({
       <p className="text-gray-600 mt-5 max-w-2xl mx-auto leading-8">
         {description}
       </p>
-
     </div>
   );
 }

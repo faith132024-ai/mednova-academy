@@ -14,11 +14,14 @@ export default function Card({
       className={`
         bg-white
         rounded-3xl
+        border
+        border-slate-200
         shadow-sm
-        hover:shadow-2xl
         transition-all
         duration-300
         hover:-translate-y-2
+        hover:shadow-2xl
+        hover:border-blue-200
         ${className}
       `}
     >

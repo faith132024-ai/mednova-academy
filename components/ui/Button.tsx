@@ -1,36 +1,25 @@
-import { ButtonHTMLAttributes } from "react";
+import { ReactNode } from "react";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+interface BadgeProps {
+  children: ReactNode;
+}
 
-export default function Button({
-  children,
-  className = "",
-  ...props
-}: ButtonProps) {
+export default function Badge({ children }: BadgeProps) {
   return (
-    <button
-      className={`
+    <span
+      className="
         inline-flex
         items-center
-        justify-center
-        rounded-xl
-        bg-blue-600
-        px-6
-        py-3
-        text-white
+        rounded-full
+        bg-blue-100
+        text-blue-700
+        px-4
+        py-2
+        text-sm
         font-semibold
-        shadow-lg
-        transition-all
-        duration-300
-        hover:bg-blue-700
-        hover:shadow-2xl
-        hover:-translate-y-1
-        active:scale-95
-        ${className}
-      `}
-      {...props}
+      "
     >
       {children}
-    </button>
+    </span>
   );
 }
