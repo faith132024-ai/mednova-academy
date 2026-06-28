@@ -3,6 +3,7 @@ import HeroSection from "@/components/home/HeroSection";
 import Statistics from "@/components/home/Statistics";
 import Features from "@/components/home/Features";
 import FeaturedCourses from "@/components/home/FeaturedCourses";
+import AiTutor from "@/components/home/AiTutor";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Statistics />
       <Features />
       <FeaturedCourses />
+      <AiTutor />
     </main>
   );
 }
